@@ -1,7 +1,10 @@
+// PAGES
+import Entries from "../Components/Entries.jsx";
+
 function Home() {
     return (
         <div className="home">
-            <h3>Glucose Logger Homepage</h3>
+            <p><Entries /></p>
             <button>
                 Add Entry
             </button>
