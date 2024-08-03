@@ -6,6 +6,9 @@ export default function NavBar() {
             <h1>
                 Glucose Logger App
             </h1>
+            <button>
+                Add Entry
+            </button>
         </nav>
     );
 }

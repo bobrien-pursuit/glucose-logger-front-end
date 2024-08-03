@@ -29,7 +29,7 @@ function Entries () {
                             <th>Total Calories</th>
                             <th>Total Fat(g)</th>
                             <th>Total Fat(g)</th>
-                            <th>Blood Sugar (g/Dl)(g)</th>
+                            <th>Blood Sugar (g/Dl)</th>
                             <th>A1C</th>
                         </tr>
                     </thead>
