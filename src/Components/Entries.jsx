@@ -17,55 +17,69 @@ function Entries () {
         .then(res => res.json())
         .then(res => {
 
-            const carbslh = res.sort((a,b) => (a.carbs - b.carbs));
-            const carbshl = res.sort((a,b) => (b.carbs - a.carbs));
-            const callh = res.sort((a,b) => (a.calories - b.calories));
-            const calhl = res.sort((a,b) => (b.calories - a.calories));
-            const fatlh = res.sort((a,b) => (a.fat - b.fat));
-            const fathl = res.sort((a,b) => (b.fat - a.fat));
-            const glucoselh = res.sort((a,b) => (a.glucose_gdl - b.glucose_gdl));
-            const glucosehl = res.sort((a,b) => (b.glucose_gdl - a.glucose_gdl));
-            const a1clh = res.sort((a,b) => (a.a1c - b.a1c));
-            const a1chl = res.sort((a,b) => (b.a1c - a.a1c));
+            
+          
+            
+            
+           
+            
+            
+            
 
             switch(value) {
 
-                case "carbslh":
-                    console.log(carbslh)
+                case "carbslh":{
+                    const carbslh = res.sort((a,b) => (a.carbs - b.carbs));
                     setEntries(carbslh);
                     break;
-                case "carbshl":
-                    console.log(carbshl)
+                }
+                case "carbshl":{
+                    const carbshl = res.sort((a,b) => (b.carbs - a.carbs));
                     setEntries(carbshl);
                     break;
-                case "callh":
-                    console.log(callh)
+                }
+                case "callh":{
+                    const callh = res.sort((a,b) => (a.calories - b.calories));
                     setEntries(callh);
                     break;
-                case "calhl":
+                }
+                case "calhl":{
+                    const calhl = res.sort((a,b) => (b.calories - a.calories));
                     console.log(calhl)
                     setEntries(calhl);
                     break;
-                case "fatlh":
+                }
+                case "fatlh":{
+                    const fatlh = res.sort((a,b) => (a.fat - b.fat));
                     setEntries(fatlh);
                     break;
-                case "fathl":
+                }
+                case "fathl":{
+                    const fathl = res.sort((a,b) => (b.fat - a.fat));
                     setEntries(fathl);
                     break;
-                case "glucoselh":
+                }
+                case "glucoselh":{
+                    const glucoselh = res.sort((a,b) => (a.glucose_gdl - b.glucose_gdl));
                     setEntries(glucoselh);
                     break;
-                case "glucosehl":
+                }
+                case "glucosehl":{
+                    const glucosehl = res.sort((a,b) => (b.glucose_gdl - a.glucose_gdl));
                     setEntries(glucosehl);
                     break;
-                case "a1clh":
+                }
+                case "a1clh":{
+                    const a1clh = res.sort((a,b) => (a.a1c - b.a1c));
                     setEntries(a1clh);
                     break;
-                case "a1chl":
+                }
+                case "a1chl":{
+                    const a1chl = res.sort((a,b) => (b.a1c - a.a1c));
                     setEntries(a1chl);
+                }
                     break;
                 default:
-                    console.log(res);
                     setEntries(res);
             }
 
