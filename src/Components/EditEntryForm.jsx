@@ -31,7 +31,7 @@ function UpdateEntryForm() {
 
     // update entry redirect to home 
     const updateEntry = () => {
-        fetch(`${API}/entries`, {
+        fetch(`${API}/entries/${id}`, {
             method: 'PUT',
             body: JSON.stringify(entry),
             headers: {
