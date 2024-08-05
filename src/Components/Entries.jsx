@@ -36,7 +36,7 @@ function Entries () {
                     <tbody>
                         {entries.map((entry) => {
                         return <Entry key={entry.id} entry={entry} id={entry.id} />;
-                        }).sort()}
+                        })}
                     </tbody>
                 </table>
             </main>
