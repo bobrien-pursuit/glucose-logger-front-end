@@ -1,6 +1,6 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import Entry from "./Entry";
+import {} from "react-router-dom"; 
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -8,10 +8,15 @@ function Entries () {
     const [entries, setEntries] = useState([]);
     const [value, setValue] = useState(null);
 
+    const handleChange = (e) => {
+        setValue(e.target.value);
+   };
+
     useEffect(() => {
         fetch(`${API}/entries`)
         .then(res => res.json())
         .then(res => {
+
             const carbslh = res.sort((a,b) => (a.carbs - b.carbs));
             const carbshl = res.sort((a,b) => (b.carbs - a.carbs));
             const callh = res.sort((a,b) => (a.calories - b.calories));
@@ -60,6 +65,7 @@ function Entries () {
                     setEntries(a1chl);
                     break;
                 default:
+                    console.log(res);
                     setEntries(res);
             }
 
@@ -71,14 +77,10 @@ function Entries () {
         .catch((err) => console.log(err));
     }, [value])
 
-    const handleChange = (e) => {
-         setValue(e.target.value);
-    };
-
     return (
-        <div className="entries__table">
-            <select id="sort" onChange={handleChange}>
-                <option value="">Sort By:</option>
+        <div>
+            <select name="sort" id="sort" onChange={handleChange}>
+                <option key="" value="">Sort By:</option>
                 <option value="carbslh">Carbs (low to high)</option>
                 <option value="carbshl">Carbs (high to low)</option>
                 <option value="callh">Calories (low to high)</option>
@@ -90,6 +92,7 @@ function Entries () {
                 <option value="a1clh">A1C (low to high)</option>
                 <option value="a1chl">A1C (high to low)</option>
             </select>
+        <div className="entries__table">
             <main>
                 <table>
                     <thead>
@@ -111,6 +114,7 @@ function Entries () {
                     </tbody>
                 </table>
             </main>
+        </div>
         </div>
     );
 }
