@@ -1,11 +1,15 @@
-import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 const API = import.meta.env.VITE_API_URL;
 
-function NewEntryForm() {
-    const navigate = useNavigate();
+function UpdateEntryForm() {
+    let { id }  = useParams();
+    let navigate = useNavigate();
+
     const [entry, setEntry] = useState ({
+        date: "",
+        time: "",
         last_meal: null,
         carbs: null,
         calories: null,
@@ -15,9 +19,20 @@ function NewEntryForm() {
         a1c: null
     });
 
-    const addEntry = () => {
+    // On page load prefil form with data from <id>
+
+    useEffect(() => {
+        fetch(`${API}/edit/entry/${id}`)
+        .then(res => res.json())
+        .then(res => setEntry(res))
+        .catch(err => console.log(err))
+        }, []);
+    })
+
+    // update entry redirect to home 
+    const updateEntry = () => {
         fetch(`${API}/entries`, {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify(entry),
             headers: {
                 "Content-Type": "application/json"
@@ -25,7 +40,7 @@ function NewEntryForm() {
         })
         .then(res => res.json())
         .then(res => {
-            navigate('/')
+            navigate(`/`);
         })
         .catch(err => console.log(err))
     };
@@ -36,7 +51,7 @@ function NewEntryForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        addEntry();
+        updateEntry();
         navigate('/');
     };
 
@@ -96,7 +111,7 @@ function NewEntryForm() {
             />
             <br />
             <br />
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </form>
         <br />
         <Link to={'/'}>
@@ -106,4 +121,4 @@ function NewEntryForm() {
     )
 }
 
-export default NewEntryForm;
+export default UpdateEntryForm;
