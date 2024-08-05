@@ -12,6 +12,8 @@ function Entries () {
         .then(res => {
             console.log(res);
             setEntries(res);
+            // const sortedEntriesByFat = res.sort((a,b) => (a.fat - b.fat))
+            // setEntries(sortedEntriesByFat);
         })
         .catch((err) => console.log(err));
     }, [])
