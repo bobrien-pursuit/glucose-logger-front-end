@@ -17,15 +17,6 @@ function Entries () {
         .then(res => res.json())
         .then(res => {
 
-            
-          
-            
-            
-           
-            
-            
-            
-
             switch(value) {
 
                 case "carbslh":{
@@ -82,11 +73,6 @@ function Entries () {
                 default:
                     setEntries(res);
             }
-
-         //  console.log(res);
-           // setEntries(res);
-            // const sortedEntriesByFat = res.sort((a,b) => (a.fat - b.fat))
-            // setEntries(sortedEntriesByFat);
         })
         .catch((err) => console.log(err));
     }, [value])
