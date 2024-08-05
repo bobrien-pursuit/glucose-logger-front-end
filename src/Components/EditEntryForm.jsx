@@ -27,7 +27,7 @@ function UpdateEntryForm() {
         .then(res => setEntry(res))
         .catch(err => console.log(err))
         }, []);
-    })
+    
 
     // update entry redirect to home 
     const updateEntry = () => {
