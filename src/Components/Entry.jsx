@@ -3,10 +3,10 @@ function Entry({ entry, id}) {
     return (
         <tr>
             <td>
-                {entry.date}
+                {entry.date_surrogate}
             </td>
             <td>
-                {entry.time}
+                {entry.time_surrogate}
             </td>
             <td>
                 {entry.last_meal}
