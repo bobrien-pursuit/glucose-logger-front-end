@@ -8,8 +8,8 @@ function UpdateEntryForm() {
     let navigate = useNavigate();
 
     const [entry, setEntry] = useState ({
-        date: "",
-        time: "",
+        date: null,
+        time: null,
         last_meal: null,
         carbs: null,
         calories: null,
@@ -22,7 +22,7 @@ function UpdateEntryForm() {
     // On page load prefil form with data from <id>
 
     useEffect(() => {
-        fetch(`${API}/edit/entry/${id}`)
+        fetch(`${API}/entries/${id}`)
         .then(res => res.json())
         .then(res => setEntry(res))
         .catch(err => console.log(err))
@@ -58,56 +58,77 @@ function UpdateEntryForm() {
     return (
         <div>
         <form onSubmit={handleSubmit}>
-            <label htmlFor="last_meal">What did you eat?</label>
+            <label htmlFor="date">Date:</label>
+            <input 
+                id = "date"
+                value = {entry.date}
+                type = "date"
+                onChange = {handleTextChange}
+                placeholder = {entry.date}
+            />
+            <label htmlFor="date">Time:</label>
+            <input 
+                id = "time"
+                value = {entry.time}
+                type = "time"
+                onChange = {handleTextChange}
+                placeholder = {entry.time}
+            />
+            <label htmlFor="last_meal">Meal:</label>
             <input 
                 id = "last_meal"
                 value = {entry.last_meal}
                 type = "text"
                 onChange = {handleTextChange}
-                placeholder = ""
+                placeholder = {entry.last_meal}
             />
-            <label htmlFor="last_meal">What did you eat?</label>
+            <label htmlFor="carbs">Carbs(g):</label>
             <input 
                 id = "carbs"
-                value = {entry.last_meal}
+                value = {entry.carbs}
                 type = "number"
                 onChange = {handleTextChange}
-                placeholder = "Enter carbs in grams"
+                placeholder = {entry.carbs}
             />
+             <label htmlFor="calories">Calories:</label>
              <input 
                 id = "calories"
-                value = {entry.last_meal}
+                value = {entry.calries}
                 type = "number"
                 onChange = {handleTextChange}
-                placeholder = "Enter calories"
+                placeholder = {entry.calories}
             />
+             <label htmlFor="fat">Fat(g):</label>
             <input 
                 id = "fat"
-                value = {entry.last_meal}
+                value = {entry.fat}
                 type = "number"
                 onChange = {handleTextChange}
-                placeholder = "Enter fat in grams"
+                placeholder = {entry.fat}
             />
+            <label htmlFor="fiber">Fiber(g):</label>
             <input 
                 id = "fiber"
-                value = {entry.last_meal}
+                value = {entry.fiber}
                 type = "number"
                 onChange = {handleTextChange}
-                placeholder = "Enter fiber in grams"
+                placeholder = {entry.fiber}
             />
+            <label htmlFor="glucose_gdl">Glucose (g/Dl):</label>
             <input 
                 id = "glucose_gdl"
-                value = {entry.last_meal}
+                value = {entry.glucose_gdl}
                 type = "number"
                 onChange = {handleTextChange}
-                placeholder = "Enter blood glucose"
+                placeholder = {entry.glucose_gdl}
             />
+            <label htmlFor="a1c">A1C:</label>
             <input 
                 id = "a1c"
-                value = {entry.last_meal}
+                value = {entry.a1c}
                 type = "number"
                 onChange = {handleTextChange}
-                placeholder = "Enter your A1C"
+                placeholder = {entry.a1c}
             />
             <br />
             <br />
