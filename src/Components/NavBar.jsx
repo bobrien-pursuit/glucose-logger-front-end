@@ -10,8 +10,9 @@ export default function NavBar() {
             <h1>
                 Glucose Logger App
             </h1>
-            { currentLocation.includes('/new') ? <h3>Enter Information Below</h3>
-            :
+            { 
+            currentLocation.includes('/new') ? 
+            <h3>Enter Information Below</h3> :
             <Link to="/new">
             <button>
                 Add Entry
