@@ -49,54 +49,59 @@ function NewEntryForm() {
                 value = {entry.last_meal}
                 type = "text"
                 onChange = {handleTextChange}
-                placeHolder = ""
+                placeholder = ""
             />
-            <label htmlFor="last_meal">What did you eat?</label>
+            <label htmlFor="last_meal">Carbs(g)</label>
             <input 
                 id = "carbs"
-                value = {entry.last_meal}
+                value = {entry.carbs}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter carbs in grams"
+                placeholder = "Enter carbs in grams"
             />
+            <label htmlFor="calories">Calories</label>
              <input 
                 id = "calories"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter calories"
+                placeholder = "Enter calories"
             />
+            <label htmlFor="fat">Fat(g)</label>
             <input 
                 id = "fat"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter fat in grams"
+                placeholder = "Enter fat in grams"
             />
+            <label htmlFor="fiber">Fiber</label>
             <input 
                 id = "fiber"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter fiber in grams"
+                placeholder = "Enter fiber in grams"
             />
+            <label htmlFor="glucose_gdl">Glucose</label>
             <input 
                 id = "glucose_gdl"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter blood glucose"
+                placeholder = "Enter blood glucose"
             />
+            <label htmlFor="a1c">A1C</label>
             <input 
                 id = "a1c"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter your A1C"
+                placeholder = "Enter your A1C"
             />
             <br />
             <br />
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </form>
         <br />
         <Link to={'/'}>
