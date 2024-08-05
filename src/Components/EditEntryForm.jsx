@@ -64,7 +64,7 @@ function UpdateEntryForm() {
                 value = {entry.last_meal}
                 type = "text"
                 onChange = {handleTextChange}
-                placeHolder = ""
+                placeholder = ""
             />
             <label htmlFor="last_meal">What did you eat?</label>
             <input 
@@ -72,42 +72,42 @@ function UpdateEntryForm() {
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter carbs in grams"
+                placeholder = "Enter carbs in grams"
             />
              <input 
                 id = "calories"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter calories"
+                placeholder = "Enter calories"
             />
             <input 
                 id = "fat"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter fat in grams"
+                placeholder = "Enter fat in grams"
             />
             <input 
                 id = "fiber"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter fiber in grams"
+                placeholder = "Enter fiber in grams"
             />
             <input 
                 id = "glucose_gdl"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter blood glucose"
+                placeholder = "Enter blood glucose"
             />
             <input 
                 id = "a1c"
                 value = {entry.last_meal}
                 type = "number"
                 onChange = {handleTextChange}
-                placeHolder = "Enter your A1C"
+                placeholder = "Enter your A1C"
             />
             <br />
             <br />
