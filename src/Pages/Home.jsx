@@ -3,7 +3,7 @@ import Entries from "../Components/Entries.jsx";
 
 function Home() {
     return (
-        <div className="home">
+        <div className="glucose">
             <Entries />
         </div>
     );
