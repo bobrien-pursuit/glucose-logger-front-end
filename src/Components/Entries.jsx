@@ -107,8 +107,8 @@ function Entries () {
                         </tr>
                     </thead>
                     <tbody>
-                        {entries.map((entry) => {
-                        return <Entry key={entry.id} entry={entry} id={entry.id} />;
+                    {entries.map((entry) => {
+                        return  <Entry key={entry.id} entry={entry} id={entry.id} />;
                         })}
                     </tbody>
                 </table>
