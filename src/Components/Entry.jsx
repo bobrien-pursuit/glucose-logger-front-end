@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
+
+const API = import.meta.env.VITE_API_URL;
 
 function Entry({ entry, id}) {
     return (
+        <Link to={`/edit/entry/${id}`}>
         <tr>
             <td>
                 {entry.date_surrogate}
@@ -30,6 +34,7 @@ function Entry({ entry, id}) {
                 {entry.a1c}
             </td>
         </tr>
+        </Link>
     );
 }
 
