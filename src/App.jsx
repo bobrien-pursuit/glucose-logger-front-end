@@ -7,6 +7,7 @@ import New from "./Components/NewEntryForm.jsx";
 import NavBar from "./Components/NavBar.jsx";
 import Edit from "./Pages/Edit.jsx";
 import DataChart from "./Components/DataChart.jsx";
+import ChartPage from "./Pages/ChartPage.jsx";
 
 // COMPONENTS
 
@@ -20,7 +21,7 @@ function App () {
             <Route path="/" element={<Home />} />
             <Route path="/new" element={<New />} />
             <Route path="/edit/entry/:id" element={<Edit />} />
-            <Route path="/chart" element={<DataChart />} />
+            <Route path="/chart" element={<ChartPage />} />
           </Routes>
         </main>
       </Router>
