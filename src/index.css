@@ -8,6 +8,12 @@
 .glucose-logger {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+.glucose-logger__navbar {
+  background-color: lightblue;
 }
 
 /*# sourceMappingURL=index.css.map */

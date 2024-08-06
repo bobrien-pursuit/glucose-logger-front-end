@@ -2,7 +2,7 @@ import NewEntryForm from "../Components/NewEntryForm.jsx";
 
 function New() {
     return (
-        <div>
+        <div className="gluocse-logger">
             <NewEntryForm />
         </div>
     );
