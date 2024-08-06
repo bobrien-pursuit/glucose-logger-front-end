@@ -41,7 +41,7 @@ function NewEntryForm() {
     };
 
     return (
-        <div>
+        <div className="glucose-logger__entry__form">
         <form onSubmit={handleSubmit}>
             <label htmlFor="last_meal">What did you eat?</label>
             <input 

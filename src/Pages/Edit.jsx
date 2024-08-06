@@ -2,7 +2,7 @@ import EditEntryForm from "../Components/EditEntryForm.jsx";
 
 function Edit() {
     return (
-        <div>
+        <div className="glucose-logger">
             <EditEntryForm />
         </div>
     );

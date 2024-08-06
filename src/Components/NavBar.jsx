@@ -6,7 +6,7 @@ export default function NavBar() {
     const currentLocation = location.pathname;
 
     return (
-        <nav>
+        <nav className="glucose-logger__navbar">
             <h1>
                 Glucose Logger App
             </h1>

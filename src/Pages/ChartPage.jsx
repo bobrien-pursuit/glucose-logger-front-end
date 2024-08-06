@@ -38,7 +38,7 @@ function ChartPage() {
     console.log(data);
 
     return (
-        <div className="chart-container">
+        <div className="glucose-logger__chart-container">
         <h2 style={{ textAlign: "center" }}>Line Chart</h2>
         <Line
           data={chartData}

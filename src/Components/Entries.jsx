@@ -77,7 +77,7 @@ function Entries () {
     }, [value])
 
     return (
-        <div>
+        <div className="glucose-logger__entries__sorter">
             <select name="sort" id="sort" onChange={handleChange}>
                 <option key="" value="">Sort By:</option>
                 <option value="carbslh">Carbs (low to high)</option>
@@ -91,7 +91,7 @@ function Entries () {
                 <option value="a1clh">A1C (low to high)</option>
                 <option value="a1chl">A1C (high to low)</option>
             </select>
-        <div className="entries__table">
+        <div className="glucose-logger__entries__table">
             <main>
                 <table>
                     <thead>

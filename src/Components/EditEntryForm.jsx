@@ -67,7 +67,7 @@ function UpdateEntryForm() {
     }
 
     return (
-        <div>
+        <div className="glucose-logger__entry__form">
         <form onSubmit={handleSubmit}>
             <label htmlFor="date_surrogate">Date:</label>
             <input 
