@@ -55,6 +55,15 @@ function UpdateEntryForm() {
         navigate('/');
     };
 
+    const handleDelete = () => {
+        fetch(`${API}/entries/${id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(res => navigate('/'))
+        .catch(err => console.log(err));
+    }
+
     return (
         <div>
         <form onSubmit={handleSubmit}>
@@ -133,11 +142,12 @@ function UpdateEntryForm() {
             <br />
             <br />
             <button type="submit">Submit</button>
-        </form>
-        <br />
+            <br />
         <Link to={'/'}>
             <button>Cancel</button>
         </Link>
+            <button onClick={handleDelete}>Delete</button>
+        </form>
         </div>
     )
 }
