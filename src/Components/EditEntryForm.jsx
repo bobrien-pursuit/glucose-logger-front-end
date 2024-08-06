@@ -8,6 +8,8 @@ function UpdateEntryForm() {
     let navigate = useNavigate();
 
     const [entry, setEntry] = useState ({
+        date_surrogate: null,
+        time_surrogate: null,
         date: null,
         time: null,
         last_meal: null,
@@ -67,21 +69,21 @@ function UpdateEntryForm() {
     return (
         <div>
         <form onSubmit={handleSubmit}>
-            <label htmlFor="date">Date:</label>
+            <label htmlFor="date_surrogate">Date:</label>
             <input 
-                id = "date"
-                value = {entry.date}
+                id = "date_surrogate"
+                value = {entry.date_surrogate}
                 type = "date"
                 onChange = {handleTextChange}
-                placeholder = {entry.date}
+                placeholder = {entry.date_surrogate}
             />
-            <label htmlFor="date">Time:</label>
+            <label htmlFor="time_surrogate">Time:</label>
             <input 
-                id = "time"
-                value = {entry.time}
+                id = "time_surrogate"
+                value = {entry.time_surrogate}
                 type = "time"
                 onChange = {handleTextChange}
-                placeholder = {entry.time}
+                placeholder = {entry.time_surrogate}
             />
             <label htmlFor="last_meal">Meal:</label>
             <input 
