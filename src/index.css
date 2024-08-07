@@ -4,6 +4,7 @@
   line-height: 2;
   text-rendering: optimizeLegibility;
   background-color: rgb(255, 255, 255);
+  color: lightblue;
 }
 
 .glucose-logger {
@@ -11,6 +12,23 @@
   padding: 0;
   width: 100vw;
   height: 100vh;
+}
+.glucose-logger__navbar__button {
+  border-radius: 10px;
+  height: 30px;
+  width: 110px;
+  background-color: white;
+  color: rgb(140, 140, 140);
+  border-color: rgb(140, 140, 140);
+}
+.glucose-logger__entries__table tr, .glucose-logger__entries__table thead, .glucose-logger__entries__table tbody {
+  border: 2px solid #004aee;
+  color: rgba(0, 75, 238, 0.6);
+  height: 50%;
+  width: 80%;
+}
+.glucose-logger__entries__table__row td {
+  border: 2px solid #004aee;
 }
 
 /*# sourceMappingURL=index.css.map */

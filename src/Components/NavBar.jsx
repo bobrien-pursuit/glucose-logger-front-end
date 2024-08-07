@@ -15,7 +15,7 @@ export default function NavBar() {
             currentLocation.includes('/new') ? 
             <h3>Enter Information Below</h3> :
             <Link to="/new">
-            <button>
+            <button className="glucose-logger__navbar__button">
                 Add Entry
             </button>
             </Link>

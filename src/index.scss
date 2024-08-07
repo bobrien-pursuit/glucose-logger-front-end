@@ -4,6 +4,7 @@
     line-height: 2;
     text-rendering: optimizeLegibility;
     background-color: rgb(255, 255, 255);
+    color: lightblue;
     
 }
 
@@ -13,6 +14,7 @@
     padding: 0;
     width: 100vw;
     height: 100vh;
+    
     
 // Pages
 
@@ -25,7 +27,16 @@
 
         &__navbar {
        
+              &__button {
+
+                border-radius: 10px;
+                height: 30px;
+                width: 110px;
+                background-color: white;
+                color: rgb(140, 140, 140);
+                border-color: rgb(140, 140, 140);
         
+            }
         
         }
 
@@ -45,8 +56,20 @@
 
             &__table {
 
+               tr, thead, tbody {
+                border: 2px solid #004aee;
+                color: #004bee99;
+                height: 50%;
+                width: 80%;
+               }
+
+               
+
                 &__row {
 
+                    td {
+                        border: 2px solid #004aee;
+                    }
                 }
 
             }
