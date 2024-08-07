@@ -13,10 +13,45 @@
     width: 100vw;
     height: 100vh;
     background-color: whitesmoke;
+// Pages
 
-    &__navbar {
-       
-        background-color: lightblue;
-        
+    &__chart-container {
+
+
     }
+
+// Components
+
+        &__navbar {
+       
+        
+        
+        }
+
+        &__entry {
+
+            &__form {
+
+            }
+
+        }
+
+        &__entries {
+
+            &__sorter {
+
+            }
+
+            &__table {
+
+                &__row {
+
+                }
+
+            }
+
+        }
+
+
+
 }

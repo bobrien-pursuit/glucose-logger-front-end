@@ -11,8 +11,7 @@ function Entry({ entry, id}) {
     }
 
     return (
-        //  <Link to={`/edit/entry/${id}`}>
-        <tr onClick={handleClick}>
+        <tr onClick={handleClick} className="glucose-logger__entries__table__row">
             <td>
                 {entry.date_surrogate}
             </td>
@@ -41,7 +40,6 @@ function Entry({ entry, id}) {
                 {entry.a1c}
             </td>
         </tr>
-        // </Link>
     );
 }
 
